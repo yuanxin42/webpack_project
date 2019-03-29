@@ -3,6 +3,12 @@ module.exports = {
     mode: 'production',
     entry: './src/index.js',
     module: {
+        rules: [{
+            test: /\.jpg$/,
+            user: {
+                loader: 'file-loader'
+            }
+        }]
     },
     output: {
         filename: 'bundle.js',
